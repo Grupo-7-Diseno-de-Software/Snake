@@ -67,7 +67,7 @@ public class SnakeModel extends GameModel {
 	private final int INITIAL_SNAKE_LENGTH = 20;
 	
 	/** The amount of fruit on the game pane */
-	private final int FRUIT_AMOUNT = 1;
+	private final int FRUIT_AMOUNT = 3;
 	
 	/** The size of the board */
 	private final int GAME_BOARD_SIZE = getGameboardSize().height * getGameboardSize().width;
@@ -136,9 +136,7 @@ public class SnakeModel extends GameModel {
 			newFruitPos = new Position((int) (Math.random() * size.width),
 										(int) (Math.random() * size.height));
 		} while (!isPositionEmpty(newFruitPos));
-
-		// ... add a new fruit to the empty tile.
-		setGameboardState(newFruitPos, FRUIT_TILE);
+                    setGameboardState(newFruitPos, FRUIT_TILE);
 	}
 	
 	
